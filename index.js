@@ -1,10 +1,7 @@
-const Discord = require('discord.io')
+const Discord = require('discord.js')
 const keys = require('./keys.json')
 
-const bot = new Discord.Client({
-   token: keys.token,
-   autorun: true
-});
+const bot = new Discord.Client()
 
 const messages = [
   `I don't know`, 
@@ -17,13 +14,14 @@ const messages = [
 ]
 
 bot.on('ready', () => {
-  `bro2when is online`
+  console.log('bro2when is online')
 })
-bot.on('message', (user, userID, channelID, message) => {
-  if (message.startsWith('?bro2when')) {
-    bot.sendMessage({
-      to: channelID,
-      message: messages[Math.floor(Math.random() * messages.length)]
-    })
+
+bot.on('message', message => {
+  if (message.content.startsWith('?bro2when')) {
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)]
+    message.reply(randomMessage)
   }
 })
+
+bot.login(keys.token)
