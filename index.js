@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-const keys = require('./keys.json')
 
 const bot = new Discord.Client()
 
@@ -24,4 +23,4 @@ bot.on('message', message => {
   }
 })
 
-bot.login(keys.token)
+bot.login(process.env.BOT_TOKEN)
