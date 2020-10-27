@@ -9,7 +9,11 @@ const messages = [
   `It's coming soon:tm: but I don't know when`,
   `We don't know if or when it is coming`,
   `I'm gonna ban you if you ask that again`,
-  `*Bro2 bonk*`
+  `*Bro2 bonk*`,
+  `Thanks for your asking, your enquiry is really important to us!
+I’m going to tell you now, we do not know when it'll be here. Bye~`,
+  `Do you know that a kitten gets killed everytime you ask that question?`,
+  `*Events go brrrrrr...*`
 ]
 
 bot.on('ready', () => {
