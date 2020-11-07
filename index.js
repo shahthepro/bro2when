@@ -21,7 +21,7 @@ bot.on('ready', () => {
 })
 
 bot.on('message', message => {
-  if (message.content.toLowerCase().startsWith('?bro2when')) {
+  if (/^[!?@]?bro2when.*/i.test(message.content)) {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)]
     message.reply(randomMessage)
   }
