@@ -16,6 +16,17 @@ I’m going to tell you now, we do not know when it'll be here. Bye~`,
   `*Events go brrrrrr...*`
 ]
 
+const messages_bro2why = [
+  '42',
+  'bananas',
+  'because koalas decided it to be so',
+  'are you sure you want the answer to that?',
+  'we might never find out',
+  "that's highly classified",
+  "if I tell you, I'd have to ban you",
+  "you can't handle the truth"
+]
+
 bot.on('ready', () => {
   console.log('bro2when is online')
 })
@@ -23,6 +34,13 @@ bot.on('ready', () => {
 bot.on('message', message => {
   if (/^[!?@]?bro2when.*/i.test(message.content)) {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)]
+    message.reply(randomMessage)
+  }
+})
+
+bot.on('message', message => {
+  if (/^[!?@]?bro2why.*/i.test(message.content)) {
+    const randomMessage = messages_bro2why[Math.floor(Math.random() * messages_bro2why.length)]
     message.reply(randomMessage)
   }
 })
