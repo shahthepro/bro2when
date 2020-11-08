@@ -19,12 +19,13 @@ I’m going to tell you now, we do not know when it'll be here. Bye~`,
 const messages_bro2why = [
   '42',
   'bananas',
-  'because koalas decided it to be so',
-  'are you sure you want the answer to that?',
-  'we might never find out',
-  "that's highly classified",
-  "if I tell you, I'd have to ban you",
-  "you can't handle the truth"
+  'Because koalas decided it to be so',
+  'Are you sure you want the answer to that?',
+  'We might never find out',
+  `That's highly classified`,
+  `If I tell you, I'd have to ban you`,
+  `You can't handle the truth`,
+  `*Kangaroo Punch*`
 ]
 
 bot.on('ready', () => {
