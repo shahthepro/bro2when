@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 
 const bot = new Discord.Client()
+const stephBot = new Discord.Client()
 
 const answers = {
   when: [
@@ -34,8 +35,20 @@ I’m going to tell you now, we do not know when it'll be here. Bye~`,
   ]
 }
 
+const stephTeaseAnswers = [
+  `Want to know when the next update is coming? Soon™`,
+  `The next car for the car hunt is a car with an engine`,
+  `I will tell you everything you want to know about the game. Are you ready? Call me in 40 years.`,
+  `You won’t have another event like the DS2. The next one will be DS3.`,
+  `I'm busy giving relationship advice to people, get back to me later, duh.`
+]
+
 bot.on('ready', () => {
   console.log('bro2when is online')
+})
+
+stephBot.on('ready', () => {
+  console.log('stephBot is online')
 })
 
 const matchRegex = /^[!?@]?bro2([a-z]+)\s.*/i
@@ -53,5 +66,20 @@ bot.on('message', message => {
   }
 })
 
+stephBot.on('message', message => {
+  const command = message.content.toString()
+    .replace(/[^a-z ]/gi, '')
+    .replace(/\s+/g, ' ')
+    .toLowerCase()
+
+  const validCommand = command.startsWith('steph tease me') || 
+    command.startsWith('tease me steph')
+
+  if (validCommand) {
+    const randomMessage = stephTeaseAnswers[Math.floor(Math.random() * stephTeaseAnswers.length)]
+    message.reply(randomMessage)
+  }
+})
 
 bot.login(process.env.BOT_TOKEN)
+stephBot.login(process.env.STEPH_BOT_TOKEN)
