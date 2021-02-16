@@ -40,7 +40,17 @@ const stephTeaseAnswers = [
   `The next car for the car hunt is a car with an engine`,
   `I will tell you everything you want to know about the game. Are you ready? Call me in 40 years.`,
   `You won’t have another event like the DS2. The next one will be DS3.`,
-  `I'm busy giving relationship advice to people, get back to me later, duh.`
+  `I'm busy giving relationship advice to people, get back to me later, duh.`,
+  `What kind of surprise would that be, huh? Smh`,
+  `Patience is key, but not to the Rimac`,
+  `Your wish is NOT my command`,
+  `I’ll grant you 3 wishes, none of them in-game`,
+  `Ok let me dust off my dancing pole, NOT`
+  `Is it hot in here or is it just me?`,
+  `If you expect the Sun, don’t be surprised when you get handed Uranus`,
+  `Here i am - what were your other 2 wishes?..  Ah,  they expired.`
+  `oh you got that car at max already? Do you want BPs for it?`,
+  `A hunt riot finished for a car you already have gold? Here’s 4 extra epics you don’t need`
 ]
 
 bot.on('ready', () => {
